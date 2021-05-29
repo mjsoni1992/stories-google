@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.5s;
+}
+
+.container {
+  max-width: 1300px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hero_header_text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .header_icon {
+    img {
+      max-width: 70px;
+    }
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 400;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+/*hero_header_text end */
+
+.HeroCollage {
+  padding-top: 200px;
+  padding-bottom: 350px;
+
+  .leftCol,
+  .rightCol {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 15px;
+    max-width: 38%;
+
+    img,
+    video {
+      border-radius: 15px;
+      width: 100%;
+    }
+
+
+  }
+
+  .leftCol {
+    img:nth-child(1) {
+      top: 20%;
+      position: relative;
+      transform: scale(0.8);
+    }
+
+    img:nth-child(2) {
+      top: 30%;
+      position: relative;
+      transform: scale(0.8);
+    }
+  }
+
+  .rightCol {
+    img:nth-child(2) {
+      top: 20%;
+      position: relative;
+      transform: scale(0.8);
+    }
+
+    img:nth-child(1) {
+      top: 30%;
+      position: relative;
+      transform: scale(0.8);
+    }
+  }
+
+  .col-md-2 {
+    max-width: 23%;
+    margin: 0 3%;
+  }
+
+  .HeroPhoneBlock {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 320px;
+    height: 550px;
+    z-index: 9;
+    opacity: 1;
+    background-position: center;
+    left: 50%;
+    position: absolute;
+    transform: scale(1.5) translateX(calc(75% - 320px));
+
+    video {
+      border-radius: 15px;
+      height: 410px;
+      position: absolute;
+      left: 33px;
+      top: 5%;
+    }
+  }
+}
+
+/*HeroCollage end */
+
+
+/*
+heroUsedby start
+*/
+.heroUsedby {
+
+  color: #fff;
+  padding: 0px 30px;
+
+  .logoWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+  }
+}
+
+/*
+heroUsedby end 
+*/
+
+.heroFooter {
+  margin-top: 500px;
+  margin-bottom: 300px;
+
+  .hero_header_text {
+    max-width: 800px;
+  }
+}
+
+/**
+featuredSlider
+*/
+.featuredSlider {
+  position: relative;
+
+  .sliderWrapper {
+    display: flex;
+
+    &:nth-child(1) {
+      .rightContent {
+        background-color: #BBE1DD;
+      }
+    }
+
+    &:nth-child(2) {
+      .rightContent {
+        background-color: #FFC8C3;
+      }
+    }
+
+    &:nth-child(3) {
+      .rightContent {
+        background-color: #B9D1FF;
+      }
+    }
+  }
+
+  .leftContent {
+    min-height: 100vh;
+    padding: 5rem 10rem;
+
+    h3,
+    p {
+      width: 100%;
+
+    }
+
+  }
+
+  .rightContent {
+    position: sticky;
+    width: 50%;
+    right: 0;
+    height: 100vh;
+    top: 0;
+  }
+
+  .leftContent,
+  .rightContent {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    video {
+      max-height: 500px;
+    }
+  }
+
+  .rightContent {
+    text-align: center;
+  }
+}
+
+.feature-slides-container {
+  display: flex;
+  //grid-template-columns: repeat(2, 1fr);
+
+  .feature-slide {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .feature-slide-title {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  .feature-slides-left {
+
+    width: 40%;
+  }
+
+  .feature-slides-right {
+    min-height: 100vh;
+    width: 60%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0;
+      transition: all ease-in-out 1s;
+      transform: scale(1.3);
+      position: absolute;
+      top: 0;
+
+      &.as-primary {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
